@@ -1,0 +1,17 @@
+.container{
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.text{
+  background-color: blue;
+  color: aliceblue;
+  margin-top: 5rem;
+  padding:.5rem 1rem;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}

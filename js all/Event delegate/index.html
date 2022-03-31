@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1> Event delegate </h1>
+   <div id="list-conatiner">
+      <ul id="all-list">
+         <li class="list">Lorem, ipsum.</li>
+         <li class="list">Ratione, veniam!</li>
+         <li class="list">Dignissimos, aperiam!</li>
+         <li class="list">Beatae, repudiandae?</li>
+      </ul>
+   </div>
+   <button style="margin-left: 1rem;" id="addBtn"> add new items</button>
+   <script>
+      const listContainer=document.getElementById('list-conatiner');
+      const list = document.getElementsByClassName('list');
+      const addBtn =document.getElementById('addBtn');
+      const allList=document.getElementById('all-list');
+      // for(const item of list){
+      //    item.addEventListener('click',function(e){
+      //       // console.log(e.target.parentNode.removeChild);
+      //       e.target.parentNode.removeChild(e.target)
+      //    })
+      // }
+      addBtn.addEventListener('click',function(){
+         const addNewItem =document.createElement('li');
+         addNewItem.innerText='lorem ipsum';
+         addNewItem.classList='list';
+         allList.appendChild(addNewItem);
+         console.log('Add item successfully')
+      })
+      // update styme remove items
+      listContainer.addEventListener('click',function(e){
+         e.target.parentNode.removeChild(e.target);
+         console.log('Delete item successfully')
+      })
+   </script>
+</body>
+</html>

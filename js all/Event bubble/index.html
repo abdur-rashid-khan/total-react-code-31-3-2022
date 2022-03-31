@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="list">
+      <h1>Bubble testing</h1>
+      <ul>
+         <li>lorem15</li>
+         <li id="p-2">lorem15</li>
+         <li>lorem15</li>
+         <li>lorem15</li>
+      </ul>
+   </div>
+   <script>
+      const list =document.getElementById('list');
+      const pTwo=document.getElementById('p-2');
+      list.addEventListener('click',function(){
+         console.log('clicked all list');
+      });
+      pTwo.addEventListener('click',function(e){
+         console.log('clicked 2nd p tag');
+         // e.stopPropagation();
+         e.stopImmediatePropagation();
+      });
+   </script>
+</body>
+</html>

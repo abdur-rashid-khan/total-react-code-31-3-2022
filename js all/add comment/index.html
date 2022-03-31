@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="all-comment">
+      <div id="comment-content">
+         <h1>Comments</h1>
+         <p id="showText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam qui maxime laborum ratione eveniet facere odit repudiandae nam non amet perferendis eligendi deserunt eum dicta at commodi veniam ad neque, asperiores perspiciatis nostrum sed! Cumque quisquam non quis autem ut molestiae incidunt tenetur aut ullam nihil minima odio ducimus beatae consequuntur quidem fugiat voluptatibus rerum, aperiam similique ex tempore exercitationem asperiores sint error. Aspernatur neque, eligendi hic corporis mollitia incidunt molestiae voluptate qui necessitatibus repellat at consequatur perferendis similique adipisci quibusdam possimus aliquid sapiente voluptatibus nisi pariatur asperiores exercitationem quae! Mollitia vero, qui quidem veniam praesentium cumque consequuntur pariatur!</p>
+      </div>
+   </div>
+   <div class="comments-typing">
+      <textarea placeholder="typing now" id="comment" name="comments" id="" cols="80" rows="10"></textarea>
+      <button id="btn">submit</button>
+   </div>
+   <script src="js/min.js"></script>
+   <script>
+      const allComment=document.getElementById('all-comment');
+      const commentContent =document.getElementById('comment-content');
+      const comment = document.getElementById('comment');
+      const showText =document.getElementById('showText');
+      const btn =document.getElementById('btn');
+      // add text
+      btn.addEventListener('click',function(){
+         const p = document.createElement('p');
+         p.style.border="solid 1px #000";
+         p.style.padding="1rem";
+         p.style.backgroundColor='#C2C1C1';
+         p.innerText=comment.value;
+         commentContent.appendChild(p);
+         allComment.appendChild(commentContent);
+         comment.value='';
+      })
+   </script>
+</body>
+</html>

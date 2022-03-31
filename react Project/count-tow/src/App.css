@@ -1,0 +1,46 @@
+.container{
+  margin: auto;
+  width: 96%;
+  height: auto;
+  padding: 0% 2%;
+}
+.content{
+  background-color: blue;
+  width: 400px;
+  height: auto;
+  text-align: center;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  color: #fff;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+#btn,#btn2{
+  background-color: #fff;
+  border: none;
+  margin: 0px 10px;
+  padding: .3rem .8rem;
+  font-size: 1.2rem;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+#btn:hover{
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#btn2:hover{
+  letter-spacing: 2px;
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+	<article>
+		<div class="div">
+		<h1 id="p">Bangladesh
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam praesentium, dicta qui sunt sed voluptates voluptate sit. Dolorum, corporis reiciendis.</p>
+		</h1>
+		</div>
+		<div id="p2" class="div">
+		<h1>Bangladesh
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam praesentium, dicta qui sunt sed voluptates voluptate sit. Dolorum, corporis reiciendis.</p>
+		</h1>
+		</div>
+		<div class="div">
+		<h1>Bangladesh
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam praesentium, dicta qui sunt sed voluptates voluptate sit. Dolorum, corporis reiciendis.</p>
+		</h1>
+		</div>
+		<ul id="allList"></ul>
+	</article>
+</main>
+<!-- <script src="js/mn.js"></script> -->
+<script>
+	// const color=document.getElementById("p").style.color='red';
+	// document.getElementById("p2").style.color = "blue";
+	const div= document.getElementsByClassName('div');
+	for(const colorCheng of div){
+		colorCheng.style.backgroundColor='red';
+		colorCheng.style.color='white';
+		colorCheng.style.padding='2rem';
+		colorCheng.style.marginTop='2rem'
+	}
+	const list=document.getElementById('allList');
+	const li =document.createElement('li');
+	li.innerText='bangladesh';
+	list.appendChild(li);
+
+	const li2 =document.createElement('li');
+	// li2.innerText='bangladesh';
+	list.appendChild(li2);
+
+	const p=document.createElement('p');
+	p.innerText='click';
+	li2.appendChild(p);
+</script>
+</body>
+</html>

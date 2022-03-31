@@ -1,0 +1,50 @@
+.container{
+  padding: 0% 2%;
+  /* margin: 2rem 5rem; */
+  margin: auto;
+  width: 96%;
+  height: auto;
+}
+.content{
+  width: 400px;
+  height: auto;
+  margin: auto;
+  margin-top: 2rem;
+  padding: .5rem .5rem;
+  background-color: blue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#countNumber{
+  color: #fff;
+}
+#btn{
+  background-color: #ffff;
+  border: none;
+  padding: 8px 1rem;
+  font-size: 16px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
+#btn:hover{
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+.content{
+  text-align: center;
+  color: #fff;
+}
+.items{
+  margin-top: 1rem;
+}

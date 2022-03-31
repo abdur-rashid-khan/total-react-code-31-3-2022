@@ -1,0 +1,1 @@
+https://api.edamam.com/search?q=egg&app_id=a52b4d43&app_key=e0e5c667605f5e91d8275c973531b80a

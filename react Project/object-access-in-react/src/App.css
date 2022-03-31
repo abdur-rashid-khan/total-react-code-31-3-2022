@@ -1,0 +1,17 @@
+.container{
+  width: 98%;
+  margin: auto;
+}
+.content{
+  background-color: aquamarine;
+  width: 500px ;
+  height: auto;
+  margin: auto;
+  padding:20px;
+  margin-top: 1rem;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}

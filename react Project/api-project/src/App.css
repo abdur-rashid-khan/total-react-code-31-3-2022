@@ -1,0 +1,24 @@
+.container{
+  margin: auto;
+  padding: 0px 20px;
+}
+.info{
+  margin-top: 1rem;
+  background-color: aqua;
+  padding: 1rem;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}
+.content{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 15px;
+  overflow: hidden;
+  width: 100%;
+}
+.content-header{
+  text-align: center;
+}

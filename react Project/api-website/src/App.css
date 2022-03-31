@@ -1,0 +1,19 @@
+.container{
+  width: 98%;
+  height: auto;
+  margin: auto;
+}
+.header{
+  text-align: center;
+}
+hr{
+  margin-bottom: 1.5rem;
+  height: 5px;
+  border: none;
+  background-color: blue;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}

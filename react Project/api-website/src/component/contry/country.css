@@ -1,0 +1,21 @@
+.country{
+   background-color: rgba(107, 107, 107, 0.541);
+   padding: 1rem;
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   -ms-border-radius: 4px;
+   -o-border-radius: 4px;
+}
+.img{
+   width: 100%;
+   height: auto;
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   -ms-border-radius: 4px;
+   -o-border-radius: 4px;
+}
+.text{
+   margin: 5px 0px;
+}

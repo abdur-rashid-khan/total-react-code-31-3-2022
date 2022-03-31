@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+      <!-- font wasame -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!--tailwindcss cdn-->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <style>
+         *{
+            box-sizing: border-box;
+         }
+         body{
+            font-family: 'Poppins', sans-serif;
+         }
+      </style>
+</head>
+<body>
+   <div class="container mx-auto ">
+      <div class="all_content pt-20">
+         <div class="banking_header text-center py-5">
+            <h1 class="text-4xl">Let's get some <span class="text-blue-800 py-4">Mooooney !! </span></h1>
+         </div>
+         <div class="banking_content py-14 mx-8">
+            <div class="grid gap-4 grid-cols-3 ">
+               <div class="deposit p-8 bg-teal-500 text-white rounded">
+                  <h1 class="text-3xl">Deposit</h1>
+                  <p class="text-2xl pt-4">$<span id="dipogitAmount">560</span></p>
+               </div>
+               <div class="deposit p-8 bg-blue-500 text-white rounded">
+                  <h1 class="text-3xl">Withdraw</h1>
+                  <p class="text-2xl pt-4">$<span id="withdraw">100</span></p>
+               </div>
+               <div class="deposit p-8 bg-rose-500 text-white rounded">
+                  <h1 class="text-3xl">Balance</h1>
+                  <p class="text-2xl pt-4">$<span id="balance">1000</span></p>
+               </div>
+            </div>
+         </div>
+         <div class="banking-walth grid gap-16 grid-cols-2 mx-8">
+            <div class="walth-header pt-4">
+               <h4 class="text-2xl py-4">Deposit</h4>
+               <input id="depositInput" class="p-2 mt-4 bg-transparent border-2 border-neutral-700 rounded w-full" type="text" placeholder="Deposit Amount" name="" id=""><br>
+               <button id="depositBtn" class="bg-yellow-500 p-2 px-6 text-xl mt-3 rounded">Deposit</button>
+            </div>
+            <div class="walth-header pt-4">
+               <h4 class="text-2xl py-4">Withdraw</h4>
+               <input class="p-2 mt-4 bg-transparent border-2 border-neutral-700 rounded w-full" type="text" placeholder="Withdraw Amount" name="" id="withdInput"><br>
+               <button id="withdrawBtn" class="bg-yellow-500 p-2 px-6 text-xl mt-3 rounded">Withdraw</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/min.js"></script>
+</body>
+</html>

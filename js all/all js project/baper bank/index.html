@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <!-- font wasame -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--tailwindcss cdn-->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+   <!-- google font -->
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <style>
+      *{
+         box-sizing: border-box;
+      }
+      body{
+         font-family: 'Poppins', sans-serif;
+      }
+      .logIn_content{
+         position: relative;
+         width: 100%;
+         height: 100vh;
+      }
+      .login_info{
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         transform: translate(50%,50%);
+      }
+   </style>
+</head>
+<body>
+   <header>
+      <main>
+         <div class="container">
+            <div class="logIn_content  my-4 text-center">
+               <div class="login_info bg-slate-400 w-2/4 h-auto mx-auto p-6 rounded">
+                  <div class="log_header text-center">
+                     <h1 class="text-3xl font-serif"> login now  <span class="text-pink-700 text-4xl font-serif">ARK Bank</span> </h1>
+                  </div>
+                  <div class="input_centent text-left px-10 pt-10">
+                     <label for="email" class="text-xl">E-mail</label>
+                     <input id="email" type="text" placeholder="Enter Your E-mail" required class="p-2 bg-transparent border-2 border-neutral-700 rounded w-full">
+                  </div>
+                  <div class="input_centent text-left px-10 pt-5">
+                     <label for="password" class="text-xl">Password</label>
+                     <input id="password" type="password" placeholder="Password" required class="p-2 bg-transparent border-2 border-neutral-700 rounded w-full">
+                  </div>
+                  <button type="submit" id="btn" class="p-1.5 bg-green-600 rounded w-10/12  mt-5 mb-6">Login</button>
+                  <a href="#" class="mt-10"><br> creeat a new account ? </a>
+               </div>
+            </div>
+         </div>
+      </main>
+   </header>
+   <script src="./js/min.js"></script>
+   <script>
+      // login now 
+         const email=document.getElementById('email');
+         const password=document.getElementById('password');
+         const loginBtn=document.getElementById('btn');
+         loginBtn.addEventListener('click',function(){
+            let userEmail=email.value;
+            let userPassword=password.value;
+            if(userEmail=="a@gmail.com"){
+               if(userPassword=="a"){
+                  location.replace('home.html');
+                  alert('login successfully');
+               }else{
+                  alert('password worrng')
+                  location.replace('index.html');
+               }
+            }else{
+               alert('email worring ')
+            }
+         });
+   </script>
+</body>
+</html>

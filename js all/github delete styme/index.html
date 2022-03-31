@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="min">
+      <h1>Delete Data</h1>
+      <p id="deleteText">Lorem</p>
+      <input id="inputText" type="text" placeholder="tying now">
+      <button disabled id="delete">Deleted</button>
+   </div>
+   <script>
+      const min=document.getElementById('min');
+      const textDelete =document.getElementById('deleteText');
+      const inputText =document.getElementById('inputText');
+      const deleteBtn=document.getElementById('delete');
+      // delete now
+      deleteBtn.addEventListener('click',function(){
+         textDelete.style.display='none';
+      })
+      // fouch
+      inputText.addEventListener('focus',function(){
+         min.style.backgroundColor='red';
+         min.style.padding='1rem .5rem';
+      })
+      inputText.addEventListener('blur',function(){
+         min.style.backgroundColor='white';
+      })
+      // keyup
+      inputText.addEventListener('keyup',function(event){
+         if(event.target.value==textDelete.innerText){
+            deleteBtn.removeAttribute('disabled');
+         }else{
+            deleteBtn.setAttribute('disabled',true);
+         }
+      })
+      
+   </script>
+</body>
+</html>

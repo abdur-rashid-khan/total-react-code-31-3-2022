@@ -1,0 +1,141 @@
+// error msg
+
+function errmsg(errorId, isShow) {
+    const errorMsg = document.querySelector(errorId);
+
+    if (isShow === true) {
+        errorMsg.classList.remove('hidden');
+    } else {
+        errorMsg.classList.add('hidden');
+    }
+
+}
+// error msg
+
+
+// totalIncome input
+
+function totalIncome() {
+    const totalIncomes = document.querySelector('#totalIncome');
+    const totalincomeValue = parseInt(totalIncomes.value);
+
+    if (totalincomeValue < 0) {
+        errmsg('#error1', true);
+    }
+    else if (isNaN(totalincomeValue)) {
+        errmsg('#error1', true);
+    }
+    else {
+        return totalincomeValue;
+    }
+
+}
+
+// totalIncome input
+
+
+// savingInput
+
+function savingInputval() {
+    const savingInput = document.querySelector('#savingInput');
+    const savingInputNumber = parseInt(savingInput.value);
+
+    if (savingInputNumber < 0) {
+        errmsg('#error4', true);
+    }
+
+    else {
+        errmsg('#error4', false);
+        return savingInputNumber;
+    }
+
+}
+// savingInput
+
+
+// total cost
+
+
+function toTalcost() {
+    const foodCost = document.querySelector('#foodCost');
+    const rentCost = document.querySelector('#rentCost');
+    const clothesCost = document.getElementById('clothesCost');
+
+
+    const foodCostValue = foodCost.value;
+    const rentCostValue = rentCost.value;
+    const clothesCostValue = clothesCost.value;
+
+    if (clothesCostValue < 0 || rentCostValue < 0 || foodCostValue < 0) {
+        errmsg('#error1', true);
+    }
+    else if (isNaN(foodCostValue) || isNaN(rentCostValue) || isNaN(clothesCostValue)) {
+        errmsg('#error1', true);
+    }
+
+    else {
+        errmsg('#error1', false);
+        const totalExpanses = parseInt(foodCostValue) + parseInt(rentCostValue) + parseInt(clothesCostValue);
+        return totalExpanses;
+    }
+
+
+}
+
+// total cost
+
+
+// calculate function
+
+const costCalculate = document.querySelector('#cost-calculation');
+
+costCalculate.addEventListener('click', () => {
+    const totalExpenseText = document.querySelector('#totalExpenses');
+    const totalBalance = document.querySelector('#totalBalance');
+
+    const allCost = toTalcost();
+    const totalIncomeVal = totalIncome();
+
+    if (allCost > totalIncomeVal) {
+        errmsg("#error2", true);
+
+
+    } else if (allCost < totalIncomeVal) {
+        errmsg("#error2", false);
+        totalExpenseText.innerText = allCost;
+        totalBalance.innerText = totalIncomeVal - allCost;
+    }
+
+})
+
+// calculate function
+
+
+
+// saving money
+
+document.querySelector('.saveing-btn button').addEventListener('click', () => {
+
+    const savingAmount = savingInputval();
+
+    const totalIncomeText = totalIncome();
+    const totalBalance = document.querySelector('#totalBalance');
+
+    const savingPersantage = (totalIncomeText * savingAmount) / 100;
+
+    const savingAmountText = document.querySelector('#savingAmount');
+
+    const remainingAmount = document.querySelector('#remainingBalance');
+
+    if (savingPersantage > totalBalance.innerText) {
+        errmsg("#error3", true);
+
+    } else if (savingPersantage < totalBalance.innerText) {
+        errmsg("#error3", false);
+        savingAmountText.innerText = savingPersantage;
+        remainingAmount.innerText = parseFloat(totalBalance.innerText) - savingPersantage;
+    }
+
+
+})
+// saving money
